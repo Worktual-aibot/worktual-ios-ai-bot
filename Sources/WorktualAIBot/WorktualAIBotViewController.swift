@@ -20,8 +20,8 @@ public final class WorktualAIBotViewController: UIViewController {
 
     // MARK: - Private
 
-    private var webView: WKWebView!
-    private var loadingOverlay: LoadingOverlayView!
+    private var webView: WKWebView?
+    private var loadingOverlay: LoadingOverlayView?
     private var loaderVisible = true
 
     // MARK: - Init
@@ -33,6 +33,11 @@ public final class WorktualAIBotViewController: UIViewController {
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) not supported") }
+
+    deinit {
+        webView?.configuration.userContentController.removeScriptMessageHandler(forName: "WorktualBridge")
+        loadingOverlay?.cleanup()
+    }
 
     // MARK: - Lifecycle
 
@@ -55,38 +60,41 @@ public final class WorktualAIBotViewController: UIViewController {
         webConfig.allowsInlineMediaPlayback = true
         webConfig.mediaTypesRequiringUserActionForPlayback = []
 
-        webView = WKWebView(frame: .zero, configuration: webConfig)
-        webView.navigationDelegate = self
-        webView.scrollView.bounces = false
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(webView)
+        let wv = WKWebView(frame: .zero, configuration: webConfig)
+        wv.navigationDelegate = self
+        wv.scrollView.bounces = false
+        wv.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(wv)
 
         NSLayoutConstraint.activate([
-            webView.topAnchor.constraint(equalTo: view.topAnchor),
-            webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            webView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            wv.topAnchor.constraint(equalTo: view.topAnchor),
+            wv.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            wv.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            wv.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+
+        webView = wv
     }
 
     private func setupLoadingOverlay() {
-        loadingOverlay = LoadingOverlayView(config: config)
-        loadingOverlay.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(loadingOverlay)
+        let overlay = LoadingOverlayView(config: config)
+        overlay.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(overlay)
 
         NSLayoutConstraint.activate([
-            loadingOverlay.topAnchor.constraint(equalTo: view.topAnchor),
-            loadingOverlay.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            loadingOverlay.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            loadingOverlay.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            overlay.topAnchor.constraint(equalTo: view.topAnchor),
+            overlay.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            overlay.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            overlay.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
 
-        loadingOverlay.startAnimations()
+        overlay.startAnimations()
+        loadingOverlay = overlay
     }
 
     private func loadBot() {
         guard let url = config.buildURL() else { return }
-        webView.load(URLRequest(url: url))
+        webView?.load(URLRequest(url: url))
     }
 
     // MARK: - Loader
@@ -94,7 +102,7 @@ public final class WorktualAIBotViewController: UIViewController {
     private func hideLoader() {
         guard loaderVisible else { return }
         loaderVisible = false
-        loadingOverlay.completeAndHide { [weak self] in
+        loadingOverlay?.completeAndHide { [weak self] in
             self?.delegate?.worktualAIBotDidBecomeReady()
         }
     }

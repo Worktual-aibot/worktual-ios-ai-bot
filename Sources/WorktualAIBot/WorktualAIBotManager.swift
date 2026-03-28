@@ -104,8 +104,9 @@ public final class WorktualAIBotManager: NSObject {
 
     /// Show the bot instantly. Must call `preload` first.
     public func show() {
-        containerView?.isHidden = false
-        hostWindow?.bringSubviewToFront(containerView!)
+        guard let container = containerView else { return }
+        container.isHidden = false
+        hostWindow?.bringSubviewToFront(container)
         isShowing = true
     }
 
