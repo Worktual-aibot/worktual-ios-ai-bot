@@ -1,8 +1,8 @@
 # Worktual AI Bot — iOS SDK
 
-Drop-in AI chatbot for native iOS apps. Preloads in background, opens instantly.
+Drop-in AI chatbot for native iOS apps. Preloads in background, opens instantly — no loading screen.
 
-## Installation (Swift Package Manager)
+## Installation
 
 In Xcode: **File → Add Package Dependencies** → paste:
 
@@ -10,16 +10,19 @@ In Xcode: **File → Add Package Dependencies** → paste:
 https://github.com/Worktual-aibot/worktual-ios-ai-bot.git
 ```
 
-## Usage (Recommended — Instant Open)
+## Setup (2 Steps)
 
-Preload the bot hidden in your app window. When the user taps your button, the bot opens **instantly** — no loading screen.
+### Step 1 — Preload in AppDelegate (runs once on app start)
 
 ```swift
+import WorktualAIBot
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: ...) -> Bool {
-        // Preload bot in background (hidden, loads WebView silently)
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        // Bot loads silently in background — user sees nothing
         WorktualAIBotManager.shared.preload(
             in: window!,
             webchatId: "YOUR_WEBCHAT_ID"
@@ -29,37 +32,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
+> **Using SceneDelegate?**
+> ```swift
+> func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options: UIScene.ConnectionOptions) {
+>     guard let windowScene = (scene as? UIWindowScene) else { return }
+>     let window = UIWindow(windowScene: windowScene)
+>     // ... your setup ...
+>     WorktualAIBotManager.shared.preload(in: window, webchatId: "YOUR_WEBCHAT_ID")
+> }
+> ```
+
+### Step 2 — Show/Hide on button tap
+
 ```swift
+import WorktualAIBot
+
 class HomeViewController: UIViewController {
 
     @IBAction func chatButtonTapped(_ sender: Any) {
-        // Opens instantly — no loading screen!
+        // Opens INSTANTLY — no loading screen!
         WorktualAIBotManager.shared.show()
     }
 }
 ```
 
-The bot hides automatically when the user closes it, and stays loaded for instant re-open.
+That's it. The bot closes itself automatically when the user taps the close button inside the chat.
 
-To handle close events:
+## How It Works
+
+1. `preload()` loads the bot WebView **hidden** in your app window on app start
+2. By the time the user taps the chat button, the bot is **already fully loaded**
+3. `show()` just makes it visible — **instant, zero delay**
+4. When user closes the chat, the bot hides but **stays loaded** in memory
+5. Next `show()` is instant again — no re-downloading
+
+## Handle Close Events (Optional)
 
 ```swift
-WorktualAIBotManager.shared.delegate = self
+class HomeViewController: UIViewController, WorktualAIBotDelegate {
 
-extension HomeViewController: WorktualAIBotDelegate {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        WorktualAIBotManager.shared.delegate = self
+    }
+
     func worktualAIBotDidClose() {
-        // Bot is already hidden, do any cleanup here
+        // Bot already hides automatically
+        // Add any custom logic here
+    }
+
+    func worktualAIBotDidBecomeReady() {
+        print("Bot is loaded and ready")
     }
 }
 ```
 
-## Alternative — Present as Modal (shows loading screen)
-
-```swift
-WorktualAIBot.launch(from: self, webchatId: "YOUR_WEBCHAT_ID")
-```
-
-## Configuration
+## Custom Branding
 
 ```swift
 let config = WorktualAIBotConfig(
@@ -70,19 +98,17 @@ let config = WorktualAIBotConfig(
     loadingBackground: UIColor(red: 1, green: 0.97, blue: 0.94, alpha: 1)
 )
 
-WorktualAIBotManager.shared.preload(in: window!, webchatId: "", config: config)
+WorktualAIBotManager.shared.preload(in: window!, webchatId: "YOUR_WEBCHAT_ID", config: config)
 ```
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | `webchatId` | `String` | Required | Your webchat ID from Worktual |
 | `baseUrl` | `String` | Production URL | Custom URL if self-hosted |
-| `loadingLogo` | `UIImage?` | `nil` (spinner) | Logo image for loading screen |
+| `loadingLogo` | `UIImage?` | `nil` (spinner) | Logo image |
 | `loadingTitle` | `String` | `"AI Assistant"` | Loading screen title |
-| `loadingSubtitle` | `String` | `"Loading your chat..."` | Loading screen subtitle |
 | `primaryColor` | `UIColor` | `#575CFF` | Progress bar colour |
-| `loadingBackground` | `UIColor` | `#F8F9FB` | Loading screen background |
-| `maxLoadTimeMs` | `Int` | `6000` | Max wait before force-showing chat |
+| `loadingBackground` | `UIColor` | `#F8F9FB` | Background colour |
 
 ## Requirements
 
