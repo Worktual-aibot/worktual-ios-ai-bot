@@ -9,7 +9,7 @@ import SwiftUI
 ///     var body: some Scene {
 ///         WindowGroup {
 ///             ContentView()
-///                 .worktualAIBot(webchatId: "YOUR_WEBCHAT_ID")
+///                 .withWorktualBot(webchatId: "YOUR_WEBCHAT_ID")
 ///         }
 ///     }
 /// }
@@ -22,7 +22,7 @@ import SwiftUI
 /// }
 /// ```
 @available(iOS 14.0, *)
-public struct WorktualAIBotModifier: ViewModifier {
+public struct WorktualBotModifier: ViewModifier {
 
     public let webchatId: String
     public let config: WorktualAIBotConfig?
@@ -49,12 +49,12 @@ public extension View {
     ///
     /// ```swift
     /// ContentView()
-    ///     .worktualAIBot(webchatId: "YOUR_WEBCHAT_ID")
+    ///     .withWorktualBot(webchatId: "YOUR_WEBCHAT_ID")
     /// ```
-    func worktualAIBot(
+    func withWorktualBot(
         webchatId: String,
         config: WorktualAIBotConfig? = nil
     ) -> some View {
-        modifier(WorktualAIBotModifier(webchatId: webchatId, config: config))
+        modifier(WorktualBotModifier(webchatId: webchatId, config: config))
     }
 }

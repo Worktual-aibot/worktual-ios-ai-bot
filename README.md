@@ -23,7 +23,7 @@ struct MyApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .worktualAIBot(webchatId: "YOUR_WEBCHAT_ID")
+                .withWorktualBot(webchatId: "YOUR_WEBCHAT_ID")
         }
     }
 }
@@ -105,7 +105,7 @@ let config = WorktualAIBotConfig(
 
 // SwiftUI
 ContentView()
-    .worktualAIBot(webchatId: "YOUR_WEBCHAT_ID", config: config)
+    .withWorktualBot(webchatId: "YOUR_WEBCHAT_ID", config: config)
 
 // UIKit
 WorktualAIBotManager.shared.preload(in: window!, webchatId: "YOUR_WEBCHAT_ID", config: config)
