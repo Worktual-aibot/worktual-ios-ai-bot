@@ -22,12 +22,12 @@ import SwiftUI
 /// }
 /// ```
 @available(iOS 14.0, *)
-struct WorktualAIBotModifier: ViewModifier {
+public struct WorktualAIBotModifier: ViewModifier {
 
-    let webchatId: String
-    let config: WorktualAIBotConfig?
+    public let webchatId: String
+    public let config: WorktualAIBotConfig?
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .onAppear {
                 // Small delay to ensure window is available
