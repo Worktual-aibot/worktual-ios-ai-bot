@@ -1,70 +1,61 @@
 # Worktual AI Bot — iOS SDK
 
-Drop-in AI chatbot for native iOS apps. One line to launch.
+Drop-in AI chatbot for native iOS apps. Preloads in background, opens instantly.
 
 ## Installation (Swift Package Manager)
 
 In Xcode: **File → Add Package Dependencies** → paste:
 
 ```
-https://github.com/user/worktual-ios-ai-bot.git
+https://github.com/Worktual-aibot/worktual-ios-ai-bot.git
 ```
 
-Or in `Package.swift`:
+## Usage (Recommended — Instant Open)
+
+Preload the bot hidden in your app window. When the user taps your button, the bot opens **instantly** — no loading screen.
 
 ```swift
-dependencies: [
-    .package(url: "https://github.com/user/worktual-ios-ai-bot.git", from: "1.0.0")
-]
-```
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-## Usage
-
-### Simple — Launch as modal (one line)
-
-```swift
-WorktualAIBot.launch(from: self, webchatId: "YOUR_WEBCHAT_ID")
-```
-
-### With close handling
-
-```swift
-class MyViewController: UIViewController, WorktualAIBotDelegate {
-
-    func openBot() {
-        WorktualAIBot.launch(
-            from: self,
-            webchatId: "YOUR_WEBCHAT_ID",
-            delegate: self
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: ...) -> Bool {
+        // Preload bot in background (hidden, loads WebView silently)
+        WorktualAIBotManager.shared.preload(
+            in: window!,
+            webchatId: "YOUR_WEBCHAT_ID"
         )
-    }
-
-    func worktualAIBotDidClose() {
-        dismiss(animated: true)
+        return true
     }
 }
 ```
 
-### Advanced — Use the ViewController directly
-
 ```swift
-let bot = WorktualAIBotViewController(
-    config: WorktualAIBotConfig(webchatId: "YOUR_WEBCHAT_ID")
-)
-bot.delegate = self
-navigationController?.pushViewController(bot, animated: true)
+class HomeViewController: UIViewController {
+
+    @IBAction func chatButtonTapped(_ sender: Any) {
+        // Opens instantly — no loading screen!
+        WorktualAIBotManager.shared.show()
+    }
+}
 ```
 
-### Instant Loading (Preload)
+The bot hides automatically when the user closes it, and stays loaded for instant re-open.
 
-Preload the bot in AppDelegate so it opens instantly:
+To handle close events:
 
 ```swift
-// In AppDelegate or SceneDelegate
-let preloader = WorktualAIBotPreloader(webchatId: "YOUR_WEBCHAT_ID")
-preloader.preload()
+WorktualAIBotManager.shared.delegate = self
 
-// Later — bot opens from cache, near instant
+extension HomeViewController: WorktualAIBotDelegate {
+    func worktualAIBotDidClose() {
+        // Bot is already hidden, do any cleanup here
+    }
+}
+```
+
+## Alternative — Present as Modal (shows loading screen)
+
+```swift
 WorktualAIBot.launch(from: self, webchatId: "YOUR_WEBCHAT_ID")
 ```
 
@@ -79,7 +70,7 @@ let config = WorktualAIBotConfig(
     loadingBackground: UIColor(red: 1, green: 0.97, blue: 0.94, alpha: 1)
 )
 
-WorktualAIBot.launch(from: self, webchatId: "", config: config, delegate: self)
+WorktualAIBotManager.shared.preload(in: window!, webchatId: "", config: config)
 ```
 
 | Parameter | Type | Default | Description |
