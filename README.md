@@ -10,79 +10,85 @@ In Xcode: **File → Add Package Dependencies** → paste:
 https://github.com/Worktual-aibot/worktual-ios-ai-bot.git
 ```
 
-## Setup (2 Steps)
+## SwiftUI Setup (2 Steps)
 
-### Step 1 — Preload in AppDelegate (runs once on app start)
+### Step 1 — Add `.worktualAIBot()` to your root view
+
+```swift
+import SwiftUI
+import WorktualAIBot
+
+@main
+struct MyApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .worktualAIBot(webchatId: "YOUR_WEBCHAT_ID")
+        }
+    }
+}
+```
+
+### Step 2 — Show on button tap
 
 ```swift
 import WorktualAIBot
 
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        // Bot loads silently in background — user sees nothing
-        WorktualAIBotManager.shared.preload(
-            in: window!,
-            webchatId: "YOUR_WEBCHAT_ID"
-        )
-        return true
+struct HomeView: View {
+    var body: some View {
+        Button("Chat with AI") {
+            WorktualAIBotManager.shared.show()
+        }
     }
 }
+```
+
+That's it. Bot opens instantly. Closes automatically when user taps close.
+
+---
+
+## UIKit Setup (2 Steps)
+
+### Step 1 — Preload in AppDelegate
+
+```swift
+import WorktualAIBot
+
+// In didFinishLaunchingWithOptions:
+WorktualAIBotManager.shared.preload(in: window!, webchatId: "YOUR_WEBCHAT_ID")
 ```
 
 > **Using SceneDelegate?**
 > ```swift
-> func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options: UIScene.ConnectionOptions) {
->     guard let windowScene = (scene as? UIWindowScene) else { return }
->     let window = UIWindow(windowScene: windowScene)
->     // ... your setup ...
->     WorktualAIBotManager.shared.preload(in: window, webchatId: "YOUR_WEBCHAT_ID")
-> }
+> WorktualAIBotManager.shared.preload(in: window, webchatId: "YOUR_WEBCHAT_ID")
 > ```
 
-### Step 2 — Show/Hide on button tap
+### Step 2 — Show on button tap
 
 ```swift
-import WorktualAIBot
-
-class HomeViewController: UIViewController {
-
-    @IBAction func chatButtonTapped(_ sender: Any) {
-        // Opens INSTANTLY — no loading screen!
-        WorktualAIBotManager.shared.show()
-    }
-}
+WorktualAIBotManager.shared.show()
 ```
 
-That's it. The bot closes itself automatically when the user taps the close button inside the chat.
+---
 
 ## How It Works
 
-1. `preload()` loads the bot WebView **hidden** in your app window on app start
-2. By the time the user taps the chat button, the bot is **already fully loaded**
-3. `show()` just makes it visible — **instant, zero delay**
-4. When user closes the chat, the bot hides but **stays loaded** in memory
-5. Next `show()` is instant again — no re-downloading
+1. Bot WebView loads **hidden** in background on app start
+2. User taps button → `show()` makes it visible **instantly**
+3. User closes chat → bot hides, stays loaded in memory
+4. Next `show()` is instant again — no re-downloading
 
-## Handle Close Events (Optional)
+## Handle Events (Optional)
 
 ```swift
-class HomeViewController: UIViewController, WorktualAIBotDelegate {
+WorktualAIBotManager.shared.delegate = self
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        WorktualAIBotManager.shared.delegate = self
-    }
-
+extension MyVC: WorktualAIBotDelegate {
     func worktualAIBotDidClose() {
         // Bot already hides automatically
-        // Add any custom logic here
     }
-
     func worktualAIBotDidBecomeReady() {
-        print("Bot is loaded and ready")
+        print("Bot loaded")
     }
 }
 ```
@@ -94,10 +100,14 @@ let config = WorktualAIBotConfig(
     webchatId: "YOUR_WEBCHAT_ID",
     loadingLogo: UIImage(named: "my_logo"),
     loadingTitle: "Support Chat",
-    primaryColor: .orange,
-    loadingBackground: UIColor(red: 1, green: 0.97, blue: 0.94, alpha: 1)
+    primaryColor: .orange
 )
 
+// SwiftUI
+ContentView()
+    .worktualAIBot(webchatId: "YOUR_WEBCHAT_ID", config: config)
+
+// UIKit
 WorktualAIBotManager.shared.preload(in: window!, webchatId: "YOUR_WEBCHAT_ID", config: config)
 ```
 

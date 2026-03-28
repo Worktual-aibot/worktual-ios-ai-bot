@@ -77,6 +77,31 @@ public final class WorktualAIBotManager: NSObject {
         containerView = container
     }
 
+    /// Preload the bot without passing a window. Automatically finds the key window.
+    /// Works with both UIKit and SwiftUI apps.
+    ///
+    /// - Parameters:
+    ///   - webchatId: Your webchat ID from Worktual.
+    ///   - config: Optional full configuration.
+    public func preload(
+        webchatId: String,
+        config: WorktualAIBotConfig? = nil
+    ) {
+        guard let window = Self.findKeyWindow() else { return }
+        preload(in: window, webchatId: webchatId, config: config)
+    }
+
+    private static func findKeyWindow() -> UIWindow? {
+        if #available(iOS 15.0, *) {
+            return UIApplication.shared.connectedScenes
+                .compactMap { $0 as? UIWindowScene }
+                .flatMap { $0.windows }
+                .first { $0.isKeyWindow }
+        } else {
+            return UIApplication.shared.windows.first { $0.isKeyWindow }
+        }
+    }
+
     /// Show the bot instantly. Must call `preload` first.
     public func show() {
         containerView?.isHidden = false
