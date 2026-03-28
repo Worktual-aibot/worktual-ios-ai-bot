@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/master.swiftdeps"
+  },
+  "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/Internal/LoadingOverlayView.swift": {
+    "dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/LoadingOverlayView.d",
+    "object": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/LoadingOverlayView.swift.o",
+    "swiftmodule": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/LoadingOverlayView~partial.swiftmodule",
+    "swift-dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/LoadingOverlayView.swiftdeps",
+    "diagnostics": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/LoadingOverlayView.dia"
+  },
+  "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBot.swift": {
+    "dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBot.d",
+    "object": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBot.swift.o",
+    "swiftmodule": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBot~partial.swiftmodule",
+    "swift-dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBot.swiftdeps",
+    "diagnostics": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBot.dia"
+  },
+  "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotConfig.swift": {
+    "dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotConfig.d",
+    "object": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotConfig.swift.o",
+    "swiftmodule": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotConfig~partial.swiftmodule",
+    "swift-dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotConfig.swiftdeps",
+    "diagnostics": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotConfig.dia"
+  },
+  "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotDelegate.swift": {
+    "dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotDelegate.d",
+    "object": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotDelegate.swift.o",
+    "swiftmodule": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotDelegate.swiftdeps",
+    "diagnostics": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotDelegate.dia"
+  },
+  "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotPreloader.swift": {
+    "dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotPreloader.d",
+    "object": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotPreloader.swift.o",
+    "swiftmodule": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotPreloader~partial.swiftmodule",
+    "swift-dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotPreloader.swiftdeps",
+    "diagnostics": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotPreloader.dia"
+  },
+  "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotViewController.swift": {
+    "dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotViewController.d",
+    "object": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotViewController.swift.o",
+    "swiftmodule": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotViewController.swiftdeps",
+    "diagnostics": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotViewController.dia"
+  }
+}

@@ -1,0 +1,733 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.xctest/Contents/MacOS/WorktualAIBotPackageTests",
+      "packagePath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot",
+      "productName" : "WorktualAIBotPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.WorktualAIBot-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/sources",
+      "importPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/Internal/LoadingOverlayView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBot.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotConfig.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotPreloader.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "WorktualAIBot",
+      "moduleOutputPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules/WorktualAIBot.swiftmodule",
+      "objects" : [
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/LoadingOverlayView.swift.o",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBot.swift.o",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotConfig.swift.o",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotDelegate.swift.o",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotPreloader.swift.o",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotViewController.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/include/WorktualAIBot-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "worktual_ios_ai_bot"
+      ],
+      "outputFileMapPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/LoadingOverlayView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBot.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotConfig.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotPreloader.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules/WorktualAIBot.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/Internal/LoadingOverlayView.swift",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBot.swift",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotConfig.swift",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotDelegate.swift",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotPreloader.swift",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotViewController.swift"
+      ],
+      "tempsPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.WorktualAIBotPackageTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.build/sources",
+      "importPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules/WorktualAIBotTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "WorktualAIBotPackageTests",
+      "moduleOutputPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules/WorktualAIBotPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.build/include/WorktualAIBotPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "worktual_ios_ai_bot"
+      ],
+      "outputFileMapPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules/WorktualAIBotPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.WorktualAIBotTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/sources",
+      "importPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Tests/WorktualAIBotTests/WorktualAIBotTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules/WorktualAIBot.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "WorktualAIBotTests",
+      "moduleOutputPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules/WorktualAIBotTests.swiftmodule",
+      "objects" : [
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/WorktualAIBotTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "worktual_ios_ai_bot"
+      ],
+      "outputFileMapPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/WorktualAIBotTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules/WorktualAIBotTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Tests/WorktualAIBotTests/WorktualAIBotTests.swift"
+      ],
+      "tempsPath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "WorktualAIBot" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "WorktualAIBot",
+      "-package-name",
+      "worktual_ios_ai_bot",
+      "-c",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/Internal/LoadingOverlayView.swift",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBot.swift",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotConfig.swift",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotDelegate.swift",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotPreloader.swift",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotViewController.swift",
+      "-I",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/include/WorktualAIBot-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "worktual_ios_ai_bot",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "WorktualAIBotPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "WorktualAIBotPackageTests",
+      "-package-name",
+      "worktual_ios_ai_bot",
+      "-c",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.build/include/WorktualAIBotPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "worktual_ios_ai_bot",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "WorktualAIBotTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "WorktualAIBotTests",
+      "-package-name",
+      "worktual_ios_ai_bot",
+      "-c",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Tests/WorktualAIBotTests/WorktualAIBotTests.swift",
+      "-I",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "worktual_ios_ai_bot",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "WorktualAIBot" : [
+
+    ],
+    "WorktualAIBotPackageTests" : [
+      "WorktualAIBotTests",
+      "WorktualAIBot"
+    ],
+    "WorktualAIBotTests" : [
+      "WorktualAIBot"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/Internal/LoadingOverlayView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBot.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotConfig.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotPreloader.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Sources/WorktualAIBot/WorktualAIBotViewController.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/sources"
+    },
+    "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.build/sources"
+    },
+    "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/LoadingOverlayView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBot.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotConfig.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotPreloader.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBot.build/WorktualAIBotViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/WorktualAIBotTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Tests/WorktualAIBotTests/WorktualAIBotTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/sources"
+    },
+    "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

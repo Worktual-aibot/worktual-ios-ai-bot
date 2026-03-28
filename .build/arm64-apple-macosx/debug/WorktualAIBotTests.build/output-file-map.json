@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/master.swiftdeps"
+  },
+  "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/Tests/WorktualAIBotTests/WorktualAIBotTests.swift": {
+    "dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/WorktualAIBotTests.d",
+    "object": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/WorktualAIBotTests.swift.o",
+    "swiftmodule": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/WorktualAIBotTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/WorktualAIBotTests.swiftdeps",
+    "diagnostics": "/Users/veenam1/Documents/Ccaas_mobile/worktual-ios-ai-bot/.build/arm64-apple-macosx/debug/WorktualAIBotTests.build/WorktualAIBotTests.dia"
+  }
+}
