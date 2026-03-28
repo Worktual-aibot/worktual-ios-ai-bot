@@ -104,6 +104,28 @@ public final class WorktualAIBotViewController: UIViewController {
     private func injectedJS() -> String {
         """
         (function() {
+            // Polyfill: bot HTML calls ReactNativeWebView.postMessage()
+            // Forward those messages to our native iOS bridge
+            window.ReactNativeWebView = {
+                postMessage: function(msg) {
+                    window.webkit.messageHandlers.WorktualBridge.postMessage(msg);
+                }
+            };
+
+            // Also intercept window.postMessage for iframe-based bots
+            var origPostMessage = window.postMessage;
+            window.postMessage = function(msg, origin) {
+                try {
+                    if (typeof msg === 'string') {
+                        window.webkit.messageHandlers.WorktualBridge.postMessage(msg);
+                    } else {
+                        window.webkit.messageHandlers.WorktualBridge.postMessage(JSON.stringify(msg));
+                    }
+                } catch(e) {}
+                return origPostMessage.call(window, msg, origin);
+            };
+
+            // Poll for chat content readiness
             var t = setInterval(function() {
                 var m = document.querySelectorAll(
                     '.message, .chat-message, .msg-content, [class*="message"]'
@@ -116,6 +138,8 @@ public final class WorktualAIBotViewController: UIViewController {
                     );
                 }
             }, 200);
+
+            // Timeout fallback
             setTimeout(function() {
                 clearInterval(t);
                 window.webkit.messageHandlers.WorktualBridge.postMessage(
