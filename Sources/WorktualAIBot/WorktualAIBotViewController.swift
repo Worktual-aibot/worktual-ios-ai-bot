@@ -23,6 +23,7 @@ public final class WorktualAIBotViewController: UIViewController {
     private var webView: WKWebView?
     private var loadingOverlay: LoadingOverlayView?
     private var loaderVisible = true
+    private var webViewTopConstraint: NSLayoutConstraint?
 
     // MARK: - Init
 
@@ -52,6 +53,17 @@ public final class WorktualAIBotViewController: UIViewController {
     public override var prefersStatusBarHidden: Bool { false }
     public override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
 
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        // Fallback: when this VC isn't properly in the VC hierarchy
+        // (e.g. WorktualAIBotManager adds it as a plain subview),
+        // safeAreaInsets may be zero. Pull the real inset from the window.
+        let safeTop = view.safeAreaInsets.top > 0
+            ? view.safeAreaInsets.top
+            : (view.window?.safeAreaInsets.top ?? 0)
+        webViewTopConstraint?.constant = safeTop
+    }
+
     // MARK: - Setup
 
     private func setupWebView() {
@@ -70,10 +82,15 @@ public final class WorktualAIBotViewController: UIViewController {
         wv.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(wv)
 
-        // Use safe area so the bot header/close button stays visible
-        // on all iPhones (notch, Dynamic Island, etc.)
+        // Pin WebView below the status bar / notch / Dynamic Island.
+        // We use a manual constant (updated in viewDidLayoutSubviews)
+        // because safe area insets may not propagate when the VC
+        // is embedded as a plain subview by WorktualAIBotManager.
+        let top = wv.topAnchor.constraint(equalTo: view.topAnchor, constant: 0)
+        webViewTopConstraint = top
+
         NSLayoutConstraint.activate([
-            wv.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            top,
             wv.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             wv.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             wv.bottomAnchor.constraint(equalTo: view.bottomAnchor)
