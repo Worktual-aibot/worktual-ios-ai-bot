@@ -33,6 +33,9 @@ public struct WorktualAIBotConfig {
     /// Max ms to wait before force-showing chat (default: 6000).
     public var maxLoadTimeMs: Int
 
+    /// Background colour behind the status bar area (default: bot header red #C62828).
+    public var statusBarColor: UIColor
+
     public static let defaultBaseURL =
         "https://ccaas-storage.worktual.co.uk/chat/ailivebot.html"
 
@@ -46,7 +49,8 @@ public struct WorktualAIBotConfig {
         loadingSubtitle: String = "Loading your chat...",
         primaryColor: UIColor = UIColor(red: 0.34, green: 0.36, blue: 1.0, alpha: 1.0),
         loadingBackground: UIColor = UIColor(red: 0.97, green: 0.98, blue: 0.98, alpha: 1.0),
-        maxLoadTimeMs: Int = 6000
+        maxLoadTimeMs: Int = 6000,
+        statusBarColor: UIColor = UIColor(red: 0.78, green: 0.16, blue: 0.16, alpha: 1.0)
     ) {
         self.webchatId = webchatId
         self.baseUrl = baseUrl
@@ -58,6 +62,7 @@ public struct WorktualAIBotConfig {
         self.primaryColor = primaryColor
         self.loadingBackground = loadingBackground
         self.maxLoadTimeMs = maxLoadTimeMs
+        self.statusBarColor = statusBarColor
     }
 
     func buildURL() -> URL? {

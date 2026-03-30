@@ -43,11 +43,14 @@ public final class WorktualAIBotViewController: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = config.statusBarColor
         setupWebView()
         setupLoadingOverlay()
         loadBot()
     }
+
+    public override var prefersStatusBarHidden: Bool { false }
+    public override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
 
     // MARK: - Setup
 
@@ -63,11 +66,14 @@ public final class WorktualAIBotViewController: UIViewController {
         let wv = WKWebView(frame: .zero, configuration: webConfig)
         wv.navigationDelegate = self
         wv.scrollView.bounces = false
+        wv.scrollView.contentInsetAdjustmentBehavior = .never
         wv.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(wv)
 
+        // Use safe area so the bot header/close button stays visible
+        // on all iPhones (notch, Dynamic Island, etc.)
         NSLayoutConstraint.activate([
-            wv.topAnchor.constraint(equalTo: view.topAnchor),
+            wv.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             wv.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             wv.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             wv.bottomAnchor.constraint(equalTo: view.bottomAnchor)
