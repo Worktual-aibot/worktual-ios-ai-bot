@@ -24,6 +24,7 @@ public final class WorktualAIBotViewController: UIViewController {
     private var loadingOverlay: LoadingOverlayView?
     private var loaderVisible = true
     private var webViewTopConstraint: NSLayoutConstraint?
+    private var webViewBottomConstraint: NSLayoutConstraint?
 
     // MARK: - Init
 
@@ -62,6 +63,11 @@ public final class WorktualAIBotViewController: UIViewController {
             ? view.safeAreaInsets.top
             : (view.window?.safeAreaInsets.top ?? 0)
         webViewTopConstraint?.constant = safeTop
+
+        let safeBottom = view.safeAreaInsets.bottom > 0
+            ? view.safeAreaInsets.bottom
+            : (view.window?.safeAreaInsets.bottom ?? 0)
+        webViewBottomConstraint?.constant = -safeBottom
     }
 
     // MARK: - Setup
@@ -87,13 +93,15 @@ public final class WorktualAIBotViewController: UIViewController {
         // because safe area insets may not propagate when the VC
         // is embedded as a plain subview by WorktualAIBotManager.
         let top = wv.topAnchor.constraint(equalTo: view.topAnchor, constant: 0)
+        let bottom = wv.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         webViewTopConstraint = top
+        webViewBottomConstraint = bottom
 
         NSLayoutConstraint.activate([
             top,
             wv.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             wv.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            wv.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            bottom
         ])
 
         webView = wv
